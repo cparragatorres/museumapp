@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../ui/general/colors.dart';
+
 class InitPage extends StatefulWidget {
   const InitPage({Key? key}) : super(key: key);
 
@@ -10,21 +12,59 @@ class InitPage extends StatefulWidget {
 
 class _InitPageState extends State<InitPage> {
   int _currentIndex = 0;
+  List<Widget> _pages = [
+    Text("Page 1"),
+    Text("Page 2"),
+    Text("Page 3"),
+    Text("Page 4"),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff232323),
+      backgroundColor: kBrandPrimaryColor,
       appBar: AppBar(
-        backgroundColor: Color(0xff232323),
+        backgroundColor: kBrandPrimaryColor,
+        title: Text(
+          "MuseumApp",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.search,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: (){},
+            icon: const Icon(Icons.cast),
+          ),
+          SizedBox(
+            width: 10.0,
+          ),
+          CircleAvatar(
+            radius: 16.0,
+            backgroundColor: Colors.white10,
+            backgroundImage: NetworkImage(
+              "https://images.pexels.com/photos/12430312/pexels-photo-12430312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            ),
+          ),
+          SizedBox(
+            width: 10.0,
+          )
+        ],
       ),
-      body: Container(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xff232323),
+        backgroundColor: kBrandPrimaryColor,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white54,
         type: BottomNavigationBarType.fixed,
