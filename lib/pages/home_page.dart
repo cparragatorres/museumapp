@@ -9,47 +9,76 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+    //*1er modo
+    // return Padding(
+    //   padding: const EdgeInsets.all(12.0),
+    //   child: Column(
+    //     crossAxisAlignment: CrossAxisAlignment.center,
+    //     children: [
+    //       divider20,
+    //       const Text(
+    //         "Museum Explorer",
+    //         style: TextStyle(
+    //           color: Colors.white,
+    //           fontSize: 20.0,
+    //         ),
+    //       ),
+    //       divider12,
+    //       const Text(
+    //         "What do you want to visit today",
+    //         style: TextStyle(
+    //           color: Colors.white54,
+    //           fontSize: 14.0,
+    //         ),
+    //       ),
+    //       SingleChildScrollView(
+    //         physics: const BouncingScrollPhysics(),
+    //         scrollDirection: Axis.horizontal,
+    //         child: Row(
+    //             children: imagesDummy
+    //                 .map((e) => ItemSliderWidget(image: e))
+    //                 .toList()),
+    //       ),
+    //       divider6,
+    //       ElevatedButton(
+    //         style: ElevatedButton.styleFrom(
+    //           primary: Colors.blueAccent,
+    //         ),
+    //         onPressed: () {},
+    //         child: Container(
+    //           margin: const EdgeInsets.symmetric(horizontal: 10.0),
+    //           child: const Text(
+    //             "Explora +3000 colecciones",
+    //           ),
+    //         ),
+    //       ),
+    //     ],
+    //   ),
+    // );
+    //*2do modo
+    return Container(
+      height: 200.0,
+      child: PageView(
+        scrollDirection: Axis.vertical,
+        physics: const BouncingScrollPhysics(),
+        onPageChanged: (int value) {
+          print(value);
+        },
         children: [
-          divider20,
-          Text(
-            "Museum Explorer",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20.0,
-            ),
+          Container(
+            color: Colors.red,
           ),
-          divider12,
-          Text(
-            "What do you want to visit today",
-            style: TextStyle(
-              color: Colors.white54,
-              fontSize: 14.0,
-            ),
+          Container(
+            color: Colors.purple,
           ),
-          SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            scrollDirection: Axis.horizontal,
-            child: Row(
-                children: imagesDummy
-                    .map((e) => ItemSliderWidget(image: e))
-                    .toList()),
+          Container(
+            color: Colors.green,
           ),
-          divider6,
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.blueAccent,
-            ),
-            onPressed: () {},
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: const Text(
-                "Explora +3000 colecciones",
-              ),
-            ),
+          Container(
+            color: Colors.blue,
+          ),
+          Container(
+            color: Colors.orange,
           ),
         ],
       ),
