@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -82,6 +82,73 @@ class HomePage extends StatelessWidget {
               child: const Text(
                 "Explora +3000 colecciones",
               ),
+            ),
+          ),
+          divider12,
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 22.0, horizontal: 14.0),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.06),
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            child: Column(
+              children: [
+                const Text(
+                  "Culture Box",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 28.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Text(
+                  "Suscribete para recibir noticias, historias y actualizaciones semanalmente",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6.0),
+                          side: BorderSide(
+                            width: 1.2,
+                            color: Colors.white10,
+                          ),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        "No, Gracias",
+                      ),
+                    ),
+                    dividerWidth12,
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6.0),
+                          side: BorderSide(
+                            width: 1.2,
+                            color: Colors.white10,
+                          ),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        "Suscribirme",
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
