@@ -292,11 +292,18 @@ class HomePage extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text(
-                            "La primer presentación de la noche",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18.0,
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.6),
+                              borderRadius: BorderRadius.circular(6.0)
+                            ),
+                            child: const Text(
+                              "La primera presentación de la noche",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18.0,
+                              ),
                             ),
                           ),
                           ElevatedButton(
